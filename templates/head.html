@@ -1,5 +1,5 @@
 <link rel="icon" type="image/png" href="{{ .icon }}"/>
-<link rel="stylesheet" href="{{ attr "templateBase" }}/css/base.css"/>
+<link rel="stylesheet" href="{{ (attr).templateBase }}/css/base.css"/>
 {{ range .link }}
 <link rel="{{ .rel }}" href="{{ .href }}"/>
 {{ end }}
