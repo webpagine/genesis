@@ -1,0 +1,11 @@
+<html lang="{{ .lang }}">
+<head>
+<title>{{ .title }}</title>
+{{ template "head.html" .head }}
+</head>
+<body>
+{{ template "header.html" .header }}
+{{ embed .content }}
+{{ template "footer.html" .footer }}
+</body>
+</html>

@@ -1,0 +1,17 @@
+.content {
+    margin: 20px 40px;
+
+    a {
+        text-decoration: none;
+        transition-duration: 500ms;
+    }
+
+    a:hover {
+        color: deepskyblue;
+        transition-duration: 500ms;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
