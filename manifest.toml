@@ -7,5 +7,5 @@ export = "page.html"
 name = "page"
 
 [[templates]]
-export = "post.html"
-name = "post"
+export = "doc.html"
+name = "doc"

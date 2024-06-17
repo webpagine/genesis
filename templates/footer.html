@@ -1,6 +1,10 @@
-<footer>
 <div class="footer">
 <div class="footer-row">
+
+<div class="footer-link-list-block">
+<img src="{{ .logo.src }}" width="{{ .logo.width }}" height="{{ .logo.height }}" alt="logo"/>
+</div>
+<div style="margin-left: 100px"></div>
 
 {{ range .lists }}
 <div class="footer-link-list-block">
@@ -31,29 +35,18 @@
 
 <div class="footer-row">
 <div class="footer-link-list-block">
-<img src="{{ .logo.src }}" width="{{ .logo.width }}" height="{{ .logo.height }}" alt="logo"/>
-</div>
-<div class="footer-link-list-block" style="margin-left: 100px; color: gray; max-width: 70%">
-{{ .description }}
-</div>
-</div>
-
-<div class="footer-row">
-<div class="footer-link-list-block">
 {{ with .copyright }}
-<span>&copy; Copyright {{ .date }}</span>
-<span>{{ .owner }}</span>
-<span style="color: gray">{{ .license }}</span>
+<span style="font-weight: bold">&copy; Copyright {{ .date }} {{ .owner }}</span>
+<span>{{ .license }}</span>
 {{ end }}
 </div>
 
 <div style="color: gray; margin-left: auto">
 Proudly built with
-<a target="_blank" href="https://github.com/webpagine/">
-<img style="vertical-align: text-top" src="/assets/img/pagine.svg" alt="pagine"/>
+<a target="_blank" href="https://pagine.symboltics.com">
+<img style="vertical-align: text-top" src="{{ (getAttr).templateBase }}/img/pagine_mono.svg" height="30px" alt="pagine"/>
 </a>
 </div>
 
 </div>
 </div>
-</footer>

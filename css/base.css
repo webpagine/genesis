@@ -1,33 +1,41 @@
 @import "components.css";
 @import "footer.css";
 @import "header.css";
+@import "doc.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 
 body {
     font-family: "Noto Sans", serif;
     margin: 0;
 }
 
-footer {
+.theme-dark {
     color: white;
-    background-color: black;
+    background-color: #1a1a1e;
 }
 
-header {
-    margin: 0;
+section {
+     padding: 50px 15%;
+
+     h1 {
+         font-size: 40px;
+     }
+
+     svg {
+         margin: 0 auto 0 auto;
+     }
+ }
+
+.section-filled {
+    background-color: #ff006a;
+
+    color: white;
 }
 
-.invert {
-    filter: invert(1);
+.theme-light #button-dark-mode-toggle {
+    color: black;
 }
-
-.content {
-    a {
-        text-decoration: none;
-        transition-duration: 500ms;
-    }
-
-    a:hover {
-        color: deepskyblue;
-        transition-duration: 500ms;
-    }
+.theme-dark #button-dark-mode-toggle {
+    color: white;
 }

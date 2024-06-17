@@ -3,33 +3,75 @@
 
     user-select: none;
 
-    a {
-        color: black;
-        text-decoration: none;
-    }
+    font-family: "Noto Sans", serif;
+    font-weight: bolder;
+
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo {
     margin-top: 30px;
-    display: block;
 }
 
 .nav-item-link {
-    margin: 30px;
+    margin: 0 30px;
     padding: 10px 20px;
     border-radius: 30px;
 
-    display: inline-block;
+    text-decoration: none;
 
     transition-duration: 200ms;
-
-    font-family: "Droid Sans", serif;
-    font-weight: bolder;
 }
 
-.nav-item-link:hover {
-    transition-duration: 200ms;
+.theme-light .nav-item-link {
+    color: black;
+}
 
+.theme-light .nav-item-link:hover {
+    background-color: lightgray;
+}
+
+.theme-dark .nav-item-link {
     color: white;
+}
+
+.theme-dark .nav-item-link:hover {
+    background-color: #2a2a2e;
+}
+
+.nav-item-link-external {
+    margin: 0 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    transition-duration: 200ms;
+}
+
+.theme-light a.nav-item-link-external {
+    color: black;
+}
+
+.theme-light a.nav-item-link-external:hover {
+    color: white;
+    background-color: #ff006a;
+}
+
+.theme-dark a.nav-item-link-external {
+    color: white;
+}
+
+.theme-dark a.nav-item-link-external:hover {
+    color: white;
+    background-color: #ff006a;
+}
+
+a.nav-item-dark-mode-toggle {
+    align-content: center;
+}
+
+a.nav-item-dark-mode-toggle:hover {
     background-color: #ff006a;
 }

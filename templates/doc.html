@@ -1,0 +1,18 @@
+<html lang="{{ .lang }}">
+<head>
+<title>{{ .title }}</title>
+{{ template "head.html" .head }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="{{ (getAttr).templateBase }}/script/blockquote.js"></script>
+<script>hljs.highlightAll()</script>
+</head>
+<body class="theme-{{ .theme }}" onload="initDarkMode(); generateAllBlockquotes()">
+{{ template "header.html" .header }}
+<div style="min-height: 100%">
+<aside class="content">{{ render .post }}</aside>
+</div>
+{{ template "footer.html" .footer }}
+</body>
+</html>

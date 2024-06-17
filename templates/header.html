@@ -1,12 +1,14 @@
+<div class="nav-bar">
 {{ with .nav }}
-<header class="nav-bar">
-<div class="nav-logo" style="float: left">
-<img src="{{ .logo.src }}" alt="logo" width="{{ .logo.width }}" height="{{ .logo.height }}"/>
+<div class="nav-logo">
+<a href="/"><img src="{{ .logo.src }}" alt="logo" width="{{ .logo.width }}" height="{{ .logo.height }}"/></a>
 </div>
-<nav style="float: right">
+<div style="margin: 0 auto"></div>
+<nav>
 {{ range .items }}
-<a class="nav-item-link" href="{{ .link }}">{{ .name }}</a>
+<a {{ if hasPrefix .link "https://" }} target="_blank" class="nav-item-link-external" {{ else }} class="nav-item-link" {{ end }} href="{{ .link }}">{{ .title }}</a>
 {{ end }}
+<a href="#" onclick="toggleDarkMode()"><span id="button-dark-mode-toggle" class="material-symbols-outlined"></span></a>
 </nav>
-</header>
+</div>
 {{ end }}

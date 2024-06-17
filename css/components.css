@@ -1,22 +1,40 @@
-a.button {
+.button {
     margin: 0 10px;
     padding: 10px 20px;
     border-radius: 30px;
 
-    font-family: "Droid Sans", serif;
+    font-family: "Noto Sans", serif;
     font-weight: bolder;
 
-    color: white;
+    text-decoration: none;
 
     transition-duration: 200ms;
-
-    background-color: #ff336a;
-
-    text-decoration: none;
 }
 
-.button:hover {
-    transition-duration: 200ms;
+.button-filled {
+    color: white !important;
 
-    background-color: #f58;
+    background-color: #ff336a !important;
+}
+
+.button-filled:hover {
+    background-color: #f58 !important;
+}
+
+.theme-light .button {
+    color: black;
+    background-color: #ddd;
+}
+
+.theme-light .button:hover {
+    background-color: #ccc;
+}
+
+.theme-dark .button {
+    color: lightgray;
+    background-color: #2a2a2e;
+}
+
+.theme-dark .button:hover {
+    background-color: black;
 }

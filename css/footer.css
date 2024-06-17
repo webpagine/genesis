@@ -1,6 +1,38 @@
 .footer {
-    margin: 0 40px;
+    margin: 0;
     padding: 50px 50px 10px 50px;
+
+    a {
+        margin-top: 10px;
+
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.theme-light .footer {
+    color: black;
+    background-color: lightgray;
+
+    a {
+        color: black;
+    }
+}
+
+.theme-dark .footer {
+    color: white;
+    background: #111;
+
+    a {
+        color: white;
+    }
+
+    img {
+        filter: invert(100%);
+    }
 }
 
 .footer-row {
@@ -17,8 +49,6 @@
 }
 
 .footer-link-list-title {
-    color: #aaa;
-
     font-weight: bold;
 }
 
@@ -28,17 +58,6 @@
     align-items: flex-start;
 
     min-width: 200px;
-
-    a {
-        color: white;
-        margin-top: 10px;
-
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
 }
 
 .footer-icon-list {
@@ -56,8 +75,6 @@
 
     width: 30px;
     height: 30px;
-
-    filter: invert(100%);
 }
 
 .footer-hr {

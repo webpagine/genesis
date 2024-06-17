@@ -1,5 +1,6 @@
 <link rel="icon" type="image/png" href="{{ .icon }}"/>
 <link rel="stylesheet" href="{{ (getAttr).templateBase }}/css/base.css"/>
-{{ range .link }}
-<link rel="{{ .rel }}" href="{{ .href }}"/>
-{{ end }}
+{{ range .link }}<link rel="{{ .rel }}" href="{{ .href }}"/>{{ end }}
+<script src="{{ (getAttr).templateBase }}/script/cookie.js"></script>
+<script src="{{ (getAttr).templateBase }}/script/darkmode.js"></script>
+{{ template "debug.html" }}

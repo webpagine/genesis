@@ -3,9 +3,9 @@
 <title>{{ .title }}</title>
 {{ template "head.html" .head }}
 </head>
-<body>
+<body class="theme-{{ .theme }}" onload="initDarkMode()">
 {{ template "header.html" .header }}
-{{ embed .content }}
+{{ apply .content "" }}
 {{ template "footer.html" .footer }}
 </body>
 </html>
