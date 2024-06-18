@@ -60,18 +60,15 @@
         border-radius: 5px;
     }
 
-    table {
+    table, th, td {
         margin: 20px 10px;
 
-        border: 1px solid;
+        border: 1px solid gray;
         border-collapse: collapse;
     }
 
     th, td {
         padding: 5px 20px;
-
-        border: 1px solid gray;
-        border-collapse: collapse;
     }
 
     li {

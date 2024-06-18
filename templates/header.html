@@ -1,10 +1,8 @@
 <div class="nav-bar">
 {{ with .nav }}
-<div class="nav-logo">
 <a href="/"><img src="{{ .logo.src }}" alt="logo" width="{{ .logo.width }}" height="{{ .logo.height }}"/></a>
-</div>
 <div style="margin: 0 auto"></div>
-<nav>
+<nav style="display: flex; flex-direction: row; align-items: center">
 {{ range .items }}
 <a {{ if hasPrefix .link "https://" }} target="_blank" class="nav-item-link-external" {{ else }} class="nav-item-link" {{ end }} href="{{ .link }}">{{ .title }}</a>
 {{ end }}
