@@ -9,3 +9,7 @@ name = "page"
 [[templates]]
 export = "doc.html"
 name = "doc"
+
+[[templates]]
+export = "locale.html"
+name = "locale"
