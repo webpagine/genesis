@@ -3,7 +3,7 @@ function generateAllBlockquotes() {
         const checker = (tag, className, color, key, title) => {
             if (e.innerText.startsWith(tag)) {
                 e.innerHTML = e.innerHTML.replace(tag, "")
-                e.innerHTML = "<div style='display: flex; align-items: center; color: " + color + "'><span class=\"material-symbols-outlined\" style='margin: 5px'>" + key + "</span><span style='font-weight: bold'>" + title + "</span></div><div style='margin-left: 10px'>" + e.innerHTML + "</div>"
+                e.innerHTML = `<div style='display: flex; align-items: center; color: ${color}'><span class=\"material-symbols-outlined\" style='margin: 5px'>${key}</span><span style='font-weight: bold'>${title}</span></div><div style='margin-left: 10px'>${e.innerHTML}</div>"`
                 e.classList.add(className);
                 return true
             }
