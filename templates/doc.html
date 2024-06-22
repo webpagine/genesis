@@ -13,9 +13,9 @@
 </head>
 <body class="theme-{{ .theme }}" onload="initDarkMode(); initDoc(); generateAllBlockquotes()">
 {{ template "header.html" .header }}
-<div style="min-height: 100%">
+<div style="min-height: 100%; display: flex">
+<main class="content">{{ render .post }}</main>
 <aside id="sidenav"></aside>
-<aside class="content">{{ render .post }}</aside>
 </div>
 {{ template "footer.html" .footer }}
 </body>
