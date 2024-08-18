@@ -1,18 +1,16 @@
 <div class="nav-bar">
-{{ with .nav }}
-<a href="/"><img src="{{ .logo.src }}" alt="logo" width="{{ .logo.width }}" height="{{ .logo.height }}"/></a>
-<div style="margin: 0 auto"></div>
+<a href="/"><img src="{{ .header.logo.src }}" alt="logo" width="{{ .header.logo.width }}" height="{{ .header.logo.height }}"/></a>
+<div style="margin: auto"></div>
 <nav style="display: flex; flex-direction: row; align-items: center">
-{{ range .items }}
+{{ range .header.nav }}
 <a
-{{ if hasPrefix .link "https://" }}
+{{ if strings.HasPrefix .link "https://" }}
 target="_blank" class="nav-item-link-external" href="{{ .link }}"
 {{ else }}
-class="nav-item-link" href="/{{ (getMetadata).locale }}{{ .link }}"
+class="nav-item-link" href="{{ .link }}"
 {{ end }}
 >{{ .title }}</a>
 {{ end }}
-<a href="#" onclick="toggleDarkMode()"><span id="button-dark-mode-toggle" class="material-symbols-outlined"></span></a>
+<span onclick="toggleDarkMode()" id="button-dark-mode-toggle" class="icon-button material-symbols-outlined"></span>
 </nav>
 </div>
-{{ end }}

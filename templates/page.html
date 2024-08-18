@@ -2,11 +2,11 @@
 <html lang="{{ .lang }}">
 <head>
 <title>{{ .title }}</title>
-{{ template "head.html" .head }}
+{{ template "head.html" . }}
 </head>
 <body class="theme-{{ .theme }}" onload="initDarkMode()">
-{{ template "header.html" .header }}
-{{ apply .content "" }}
-{{ template "footer.html" .footer }}
+{{ template "header.html" . }}
+{{ api.ApplyFile "v1" .content . }}
+{{ template "footer.html" . }}
 </body>
 </html>

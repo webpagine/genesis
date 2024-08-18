@@ -1,6 +1,5 @@
 <link rel="icon" type="image/png" href="{{ .icon }}"/>
-<link rel="stylesheet" href="{{ (getAttr).templateBase }}/css/base.css"/>
+<link rel="stylesheet" href="{{ api.Attr.templateBase }}/css/base.css"/>
+{{ api.Apply "com.github.webpagine.darkmode" "head" This }}
 {{ range .link }}<link rel="{{ .rel }}" href="{{ .href }}"/>{{ end }}
-<script src="{{ (getAttr).templateBase }}/script/cookie.js"></script>
-<script src="{{ (getAttr).templateBase }}/script/darkmode.js"></script>
 {{ template "debug.html" }}

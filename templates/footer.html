@@ -1,4 +1,6 @@
 <div class="footer">
+{{ with .footer }}
+
 <div class="footer-row">
 
 <div class="footer-link-list-block">
@@ -6,6 +8,7 @@
 </div>
 <div style="margin-left: 100px"></div>
 
+<div style="display: flex">
 {{ range .lists }}
 <div class="footer-link-list-block">
 <div class="footer-link-list-title">{{ .title }}</div>
@@ -18,10 +21,11 @@
 </div>
 </div>
 {{ end }}
+</div>
 
 <div class="footer-link-list-block" style="margin-left: auto">
 <div class="footer-icon-list">
-{{ range .media.list }}
+{{ range .media }}
 <a class="footer-icon" target="_blank" href="{{ .link }}">
 <img src="https://simpleicons.org/icons/{{ .icon }}.svg" alt="{{ .icon }}"/>
 </a>
@@ -44,9 +48,10 @@
 <div style="color: gray; margin-left: auto">
 Proudly built with
 <a target="_blank" href="https://pagine.symboltics.com">
-<img style="vertical-align: text-top" src="{{ (getAttr).templateBase }}/img/pagine_mono.svg" height="30px" alt="pagine"/>
+<img style="vertical-align: text-top" src="{{ api.Attr.templateBase }}/img/pagine_mono.svg" height="30px" alt="pagine"/>
 </a>
 </div>
-
 </div>
+
+{{ end }}
 </div>
