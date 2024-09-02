@@ -4,7 +4,7 @@
 <div class="footer-row">
 
 <div class="footer-link-list-block">
-<img src="{{ .logo.src }}" width="{{ .logo.width }}" height="{{ .logo.height }}" alt="logo"/>
+<img src="{{ .logo.src }}" width="{{ .logo.width }}" height="{{ .logo.height }}" alt="logo" {{ if not (strings.HasPrefix .logo.src ".svg") }}style="filter: invert(0)"{{ end }}/>
 </div>
 <div style="margin-left: 100px"></div>
 

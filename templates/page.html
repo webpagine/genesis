@@ -6,7 +6,7 @@
 </head>
 <body class="theme-{{ .theme }}" onload="initDarkMode()">
 {{ template "header.html" . }}
-{{ api.ApplyFile "v1" .content . }}
+<div style="min-height: 100vh">{{ api.ApplyFile "v1" .content . }}</div>
 {{ template "footer.html" . }}
 </body>
 </html>

@@ -1,4 +1,0 @@
-stage:
-  - spec: "tsc/v1"
-    title: Build TypeScript
-    path: /script/
