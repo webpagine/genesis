@@ -10,15 +10,37 @@ body {
     transition-duration: 200ms;
 }
 
+.theme-light .monochrome-invert {
+    filter: invert(0);
+}
+
+.theme-dark .monochrome-invert {
+    filter: invert(100%);
+}
+
 .theme-dark {
     color: white;
     background-color: #1a1a1e;
+}
+
+.theme-light a {
+    color: black;
+}
+
+.theme-dark a {
+    color: white;
 }
 
 section {
     padding: 50px 15%;
 
     display: flex;
+
+    a {
+        font-weight: bold;
+
+        text-decoration: underline 2px;
+    }
 
     h1 {
         font-size: 40px;
@@ -33,6 +55,10 @@ section.filled {
     background-color: #ff006a;
 
     color: white;
+
+    a {
+        color: white;
+    }
 }
 
 section.left {
@@ -46,6 +72,8 @@ section.left {
 
     div.content-2 {
         margin-left: auto;
+
+        text-align: right;
     }
 }
 
@@ -60,6 +88,8 @@ section.right {
 
     div.content-2 {
         margin-right: auto;
+
+        text-align: left;
     }
 }
 
